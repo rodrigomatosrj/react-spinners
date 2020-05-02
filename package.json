@@ -40,7 +40,8 @@
     "major": "npm version major && npm publish && npm run clean",
     "watch": "babel-node ./node_modules/.bin/webpack --watch --config ./webpack.config.dev.js",
     "clean": "rm -rf helpers/; rm -f *Loader.js; rm -f *Loader.d.ts; rm -f index.js; rm -f index.d.ts; rm -f interfaces.js; rm -f interfaces.d.ts; rm -rf docs/js",
-    "lint": "./node_modules/.bin/tslint --config tslint.json --format stylish --project . --fix",
+    "lint": "./node_modules/.bin/eslint -c .eslintrc.js --ext .ts,.tsx ./src",
+    "lint:report": "/node_modules/.bin/eslint -c .eslintrc.js --ext .ts,.tsx --format junit ./src > test-results/eslint.xml",
     "test:jest": "./node_modules/.bin/jest --runInBand",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
     "remove:tag": "npm dist-tag rm react-spinners"
