@@ -19,7 +19,7 @@ const cssUnit: { [unit: string]: boolean } = {
 };
 
 /**
- * If size is a number, append px to the value as default unit.
+ * if size is a number, append px to the value as default unit.
  * If size is a string, validate against list of valid units.
  * If unit is valid, return size as is.
  * If unit is invalid, console warn issue, replace with px as the unit.
@@ -35,14 +35,14 @@ export function parseLengthAndUnit(size: number | string): LengthObject {
     };
   }
   let value: number;
-  let valueString: string = size.match(/^[0-9.]*/)!.toString();
+  let valueString: string = (/^[0-9.]*/.exec(size) || "").toString();
   if (valueString.includes(".")) {
     value = parseFloat(valueString);
   } else {
     value = parseInt(valueString, 10);
   }
 
-  let unit: string = size.match(/[^0-9]*$/)!.toString();
+  let unit: string = (/[^0-9]*$/.exec(size) || "invalid").toString();
 
   if (cssUnit[unit]) {
     return {

@@ -144,7 +144,7 @@
         "next": "return"
       }
     ],
-    "prefer-arrow/prefer-arrow-functions": "error",
+    "prefer-arrow/prefer-arrow-functions": "off",
     "prefer-const": [
       "off",
       {
