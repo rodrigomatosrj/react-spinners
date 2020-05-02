@@ -13,5 +13,6 @@
     "outDir": ".",
     "strict": true
   },
-  "exclude": ["docs/*", "webpack.config.*", "*.js", "examples/*", "__tests__"]
+  "include": ["src", "examples", "__tests__"],
+  "exclude": ["docs/*", "webpack.config.*", "*.js"]
 }
