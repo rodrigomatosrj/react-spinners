@@ -1,4 +1,4 @@
-/** @jsx jsx */
+/**@jsx jsx */
 import * as React from "react";
 import { keyframes, css, jsx } from "@emotion/core";
 import { Keyframes } from "@emotion/serialize";
@@ -26,9 +26,7 @@ class Loader extends React.PureComponent<LoaderHeightWidthRadiusProps> {
     return value + 18;
   };
 
-  public quarter = (): number => {
-    return this.radius() / 2 + this.radius() / 5.5;
-  };
+  public quarter = (): number => this.radius() / 2 + this.radius() / 5.5;
 
   public style: StyleFunctionWithIndex = (i: number): PrecompiledCss => {
     const { height, width, margin, color, radius } = this.props;
@@ -46,8 +44,7 @@ class Loader extends React.PureComponent<LoaderHeightWidthRadiusProps> {
     `;
   };
 
-  public wrapper: StyleFunction = (): PrecompiledCss => {
-    return css`
+  public wrapper: StyleFunction = (): PrecompiledCss => css`
       position: relative;
       font-size: 0;
       top: ${this.radius()}px;
@@ -55,7 +52,6 @@ class Loader extends React.PureComponent<LoaderHeightWidthRadiusProps> {
       width: ${this.radius() * 3}px;
       height: ${this.radius() * 3}px;
     `;
-  };
 
   public a: StyleFunction = (): PrecompiledCss => css`
     ${this.style(1)};

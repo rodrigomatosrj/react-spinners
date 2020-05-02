@@ -1,4 +1,4 @@
-/** @jsx jsx */
+/**@jsx jsx */
 import * as React from "react";
 import { keyframes, css, jsx } from "@emotion/core";
 import { Keyframes } from "@emotion/serialize";
@@ -22,13 +22,11 @@ class Loader extends React.PureComponent<LoaderSizeProps> {
     return value / 7;
   };
 
-  public ballStyle: BallStyleFunction = (size: number): PrecompiledCss => {
-    return css`
+  public ballStyle: BallStyleFunction = (size: number): PrecompiledCss => css`
       width: ${cssValue(size)};
       height: ${cssValue(size)};
       border-radius: 100%;
     `;
-  };
 
   public wrapper: StyleFunction = (): PrecompiledCss => {
     const { size } = this.props;

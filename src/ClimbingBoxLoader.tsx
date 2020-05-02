@@ -1,4 +1,4 @@
-/** @jsx jsx */
+/**@jsx jsx */
 import * as React from "react";
 import { keyframes, css, jsx } from "@emotion/core";
 import { Keyframes } from "@emotion/serialize";
@@ -70,13 +70,11 @@ class Loader extends React.PureComponent<LoaderSizeProps> {
     `;
   };
 
-  public container: StyleFunction = (): PrecompiledCss => {
-    return css`
+  public container: StyleFunction = (): PrecompiledCss => css`
       position: relative;
       width: 7.1em;
       height: 7.1em;
     `;
-  };
 
   public render(): JSX.Element | null {
     const { loading, css } = this.props;

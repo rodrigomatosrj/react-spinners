@@ -25,7 +25,7 @@ export const calculateRgba: RgbaFunction = (color: string, opacity: number): str
     color = BasicColors[color as keyof typeof BasicColors];
   }
 
-  if (color[0] === "#") {
+  if (color.startsWith("#")) {
     color = color.slice(1);
   }
 
@@ -38,8 +38,7 @@ export const calculateRgba: RgbaFunction = (color: string, opacity: number): str
     color = res;
   }
 
-  let rgbValues: string = color
-    .match(/.{2}/g)!
+  let rgbValues: string = (color.match(/.{2}/g) || ["00", "00", "00"])
     .map((hex: string) => parseInt(hex, 16))
     .join(", ");
 

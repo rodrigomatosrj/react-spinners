@@ -1,4 +1,4 @@
-/** @jsx jsx */
+/**@jsx jsx */
 import * as React from "react";
 import { keyframes, css, jsx } from "@emotion/core";
 import { Keyframes } from "@emotion/serialize";
@@ -6,7 +6,7 @@ import { Keyframes } from "@emotion/serialize";
 import { sizeMarginDefaults, cssValue } from "./helpers";
 import { PrecompiledCss, LoaderSizeMarginProps, StyleFunctionWithIndex } from "./interfaces";
 
-const riseAmount: number = 30;
+const riseAmount = 30;
 
 const even: Keyframes = keyframes`
   0% {transform: scale(1.1)}

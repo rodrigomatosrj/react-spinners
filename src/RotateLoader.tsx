@@ -1,4 +1,4 @@
-/** @jsx jsx */
+/**@jsx jsx */
 import * as React from "react";
 import { keyframes, css, jsx } from "@emotion/core";
 import { Keyframes } from "@emotion/serialize";
@@ -44,15 +44,13 @@ class Loader extends React.PureComponent<LoaderSizeMarginProps> {
     `;
   };
 
-  public wrapper: StyleFunction = (): PrecompiledCss => {
-    return css`
+  public wrapper: StyleFunction = (): PrecompiledCss => css`
       ${this.ball()};
       display: inline-block;
       position: relative;
       animation-fill-mode: both;
       animation: ${rotate} 1s 0s infinite cubic-bezier(0.7, -0.13, 0.22, 0.86);
     `;
-  };
 
   public long: StyleFunction = (): PrecompiledCss => css`
     ${this.ball()};

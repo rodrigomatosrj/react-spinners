@@ -1,4 +1,4 @@
-/** @jsx jsx */
+/**@jsx jsx */
 import * as React from "react";
 import { keyframes, css, jsx } from "@emotion/core";
 import { Keyframes } from "@emotion/serialize";
@@ -11,7 +11,7 @@ import {
   StyleFunctionWithIndex
 } from "./interfaces";
 
-// 1.5 4.5 7.5
+//1.5 4.5 7.5
 let distance: number[] = [1, 3, 5];
 
 const propagate: Keyframes[] = [
@@ -70,11 +70,9 @@ class Loader extends React.PureComponent<LoaderSizeProps> {
     `;
   };
 
-  public wrapper: StyleFunction = (): PrecompiledCss => {
-    return css`
+  public wrapper: StyleFunction = (): PrecompiledCss => css`
       position: relative;
     `;
-  };
 
   public render(): JSX.Element | null {
     const { loading, css } = this.props;

@@ -1,4 +1,4 @@
-/** @jsx jsx */
+/**@jsx jsx */
 import * as React from "react";
 import { keyframes, css, jsx } from "@emotion/core";
 import { Keyframes } from "@emotion/serialize";
@@ -41,8 +41,8 @@ export class Loader extends React.PureComponent<LoaderHeightWidthProps> {
       animation-fill-mode: forwards;
       animation: ${i === 1 ? long : short} 2.1s ${i === 2 ? "1.15s" : ""}
         ${i === 1
-          ? "cubic-bezier(0.65, 0.815, 0.735, 0.395)"
-          : "cubic-bezier(0.165, 0.84, 0.44, 1)"}
+    ? "cubic-bezier(0.65, 0.815, 0.735, 0.395)"
+    : "cubic-bezier(0.165, 0.84, 0.44, 1)"}
         infinite;
     `;
   };

@@ -1,4 +1,4 @@
-/** @jsx jsx */
+/**@jsx jsx */
 import * as React from "react";
 import { keyframes, css, jsx } from "@emotion/core";
 import { Keyframes } from "@emotion/serialize";
@@ -34,7 +34,7 @@ class Loader extends React.PureComponent<LoaderSizeProps> {
       left: 0;
       width: ${`${value}${unit}`};
       height: ${`${value}${unit}`};
-      border: ${`${value! / 10}${unit}`} solid ${color};
+      border: ${`${value / 10}${unit}`} solid ${color};
       opacity: 0.4;
       border-radius: 100%;
       animation-fill-mode: forwards;

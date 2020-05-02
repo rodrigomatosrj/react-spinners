@@ -1,4 +1,4 @@
-/** @jsx jsx */
+/**@jsx jsx */
 import * as React from "react";
 import { keyframes, css, jsx } from "@emotion/core";
 
@@ -26,8 +26,8 @@ class Loader extends React.PureComponent<LoaderSizeProps> {
 
     return css`
       position: absolute;
-      height: ${`${value! * (1 - i / 10)}${unit}`};
-      width: ${`${value! * (1 - i / 10)}${unit}`};
+      height: ${`${value * (1 - i / 10)}${unit}`};
+      width: ${`${value * (1 - i / 10)}${unit}`};
       border: 1px solid ${color};
       border-radius: 100%;
       transition: 2s;

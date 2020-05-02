@@ -1,4 +1,4 @@
-/** @jsx jsx */
+/**@jsx jsx */
 import * as React from "react";
 import { keyframes, css, jsx } from "@emotion/core";
 import { Keyframes } from "@emotion/serialize";
@@ -44,7 +44,7 @@ class Loader extends React.PureComponent<LoaderSizeMarginProps> {
     let sizeWithUnit: LengthObject = parseLengthAndUnit(size!);
     let marginWithUnit: LengthObject = parseLengthAndUnit(margin!);
 
-    let width: string = `${parseFloat(sizeWithUnit.value.toString()) * 3 +
+    let width = `${parseFloat(sizeWithUnit.value.toString()) * 3 +
       parseFloat(marginWithUnit.value.toString()) * 6}${sizeWithUnit.unit}`;
 
     return css`

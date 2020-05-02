@@ -1,4 +1,4 @@
-/** @jsx jsx */
+/**@jsx jsx */
 import * as React from "react";
 import { keyframes, css, jsx } from "@emotion/core";
 import { Keyframes } from "@emotion/serialize";
@@ -26,7 +26,7 @@ class Loader extends React.PureComponent<LoaderSizeProps> {
     const { size } = this.props;
     let { value } = parseLengthAndUnit(size!);
 
-    return (value! - this.thickness()) / 2;
+    return (value - this.thickness()) / 2;
   };
 
   public offset: CalcFunction<number> = (): number => this.lat() - this.thickness();
