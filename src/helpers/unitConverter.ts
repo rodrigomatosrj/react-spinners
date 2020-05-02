@@ -60,13 +60,13 @@ export function parseLengthAndUnit(size: number | string): LengthObject {
 }
 
 /**
- * Take value as an input and return valid css value
+ * take value as an input and return valid css value
  *
  * @param {(number | string)} value
  * @return {string} valid css value
  */
 export function cssValue(value: number | string): string {
-  let lengthWithunit: LengthObject = parseLengthAndUnit(value!);
+  let lengthWithunit: LengthObject = parseLengthAndUnit(value);
 
   return `${lengthWithunit.value}${lengthWithunit.unit}`;
 }
